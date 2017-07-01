@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.RandomForest -I 100 -K 0 -S 1
+Relation:     petsc_data-weka.filters.unsupervised.attribute.Remove-R2-4,6-12,14-26,28,31-35
+Instances:    97436
+Attributes:   8
+               UpperBW
+               LowerBW
+               NumericValueSymmetry2
+               RowVariance
+               DiagSign
+               DiagNNZ
+              solver
+              class
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Random forest of 100 trees, each constructed while considering 3 random features.
+Out of bag error: 0.0112
+
+
+
+Time taken to build model: 256.97 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       96309               98.8433 %
+Incorrectly Classified Instances      1127                1.1567 %
+Kappa statistic                          0.9764
+K&B Relative Info Score            9194060.1791 %
+K&B Information Score                90399.7297 bits      0.9278 bits/instance
+Class complexity | order 0           95803.226  bits      0.9832 bits/instance
+Class complexity | scheme            12552.1007 bits      0.1288 bits/instance
+Complexity improvement     (Sf)      83251.1253 bits      0.8544 bits/instance
+Mean absolute error                      0.0319
+Root mean squared error                  0.1008
+Relative absolute error                  6.5387 %
+Root relative squared error             20.3998 %
+Total Number of Instances            97436     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.984     0.006      0.996     0.984     0.99       0.999    good
+                 0.994     0.016      0.979     0.994     0.986      0.999    bad
+Weighted Avg.    0.988     0.01       0.989     0.988     0.988      0.999
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 55247   882 |     a = good
+   245 41062 |     b = bad
